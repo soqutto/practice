@@ -7,5 +7,14 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    int a,b,c,d;
+    cin >> a >> b >> c >> d;
+
+    int ans = b;
+    if(c >= 0) ans -= c;
+    else ans -= c;
+
+    cout << ans << endl;
+
+    return 0;
 }

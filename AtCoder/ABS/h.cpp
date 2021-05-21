@@ -7,5 +7,19 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    int N; cin >> N;
+    vector<int> D(N);
+    for(auto& d: D) cin >> d;
+    sort(ALL(D));
+
+    int ans = 0;
+    int prev_mochi_size = 0;
+    for(auto d: D){
+        if(prev_mochi_size < d){
+            prev_mochi_size = d;
+            ans++;
+        }
+    }
+    cout << ans << endl;
+    return 0;
 }

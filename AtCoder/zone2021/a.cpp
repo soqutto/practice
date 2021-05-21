@@ -7,5 +7,13 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    string s; cin >> s;
+    int ans = 0;
+    for(int i=0; i<s.length()-3; ++i){
+        if(s.substr(i, 4) == "ZONe"){
+            ans++;
+        }
+    }
+    cout << ans << endl;
+    return 0;
 }

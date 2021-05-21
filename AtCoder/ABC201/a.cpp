@@ -7,5 +7,10 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
+  vector<int> A(3);
+  for(auto& a: A) cin >> a;
+  sort(ALL(A));
+
+  cout << (A[2] - A[1] == A[1] - A[0] ? "Yes" : "No") << endl;
   return 0;
 }

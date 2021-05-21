@@ -7,5 +7,20 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    string X; cin >> X;
+    string n;
+    bool decimal = true;
+
+    for(int i=0; i<X.size(); ++i){
+        if(X[i] == '.'){
+            decimal = false;
+            n = X.substr(0, i);
+        }
+    }
+
+    if(decimal) n = X;
+
+    cout << n << endl;
+
+    return 0;
 }

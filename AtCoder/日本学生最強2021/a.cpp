@@ -7,5 +7,18 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    int X, Y, Z;
+    cin >> X >> Y >> Z;
+
+    int max_price = 0;
+
+    for(int i=0; i<1e7; ++i){
+        if(Y*Z > X*i) {
+            max_price = i;
+        } else break;
+    }
+
+    cout << max_price << endl;
+
+    return 0;
 }

@@ -7,5 +7,18 @@ template<class T> inline bool chmax(T& a, T b){if(a<b){a=b; return true;} return
 using namespace std;
 
 int main(){
-  return 0;
+    int A, B;
+    cin >> A >> B;
+
+    int maxgcd = 1;
+    for(int i=A; i<B; ++i){
+        for(int j = i+1; j<=B; ++j){
+            
+            chmax(maxgcd, gcd(i, j));
+        }
+    }
+
+    cout << maxgcd << endl;
+
+    return 0;
 }
